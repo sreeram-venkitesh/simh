@@ -11,16 +11,17 @@ body {
 }
 
 .heading h1 {
-    color: black;
-    font-size: 70px;
+    color: whitesmoke;
+    font-size: 60px;
 }
 
-.heading h3 {
-    color: wheat;
-    font-size: 20px;
+.heading h2 {
+    color: whitesmoke;
+    font-style: inherit, oblique;
+    font-family: cursive;
 }
 
 #particles-js {
-    background: red;
+    background: black;
     height: 100vh;
 }
