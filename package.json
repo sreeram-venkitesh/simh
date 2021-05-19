@@ -8,14 +8,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fillerInk/simh.git"
+        "url": "git+https://github.com/sreeram-venkitesh/simh.git"
     },
     "author": "Sreeram Venkitesh",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/fillerInk/simh/issues"
+        "url": "https://github.com/sreeram-venkitesh/simh/issues"
     },
-    "homepage": "https://github.com/fillerInk/simh#readme",
+    "homepage": "https://github.com/sreeram-venkitesh/simh#readme",
     "dependencies": {
         "ejs": "^3.1.6",
         "express": "^4.17.1",
