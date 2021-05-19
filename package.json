@@ -19,6 +19,7 @@
     "dependencies": {
         "ejs": "^3.1.6",
         "express": "^4.17.1",
-        "particles.js": "^2.0.0"
+        "particles.js": "^2.0.0",
+        "pigpio": "^3.3.1"
     }
 }
