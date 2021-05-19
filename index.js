@@ -19,8 +19,19 @@ app.get('/sanitiser',(req,res)=>{
     res.render('html/sanitiser')
 });
 
+app.post('/sanitise',(req,res)=>{
+    console.log("Servo motor working")
+    
+    res.redirect("/form")
+});
+
 app.get('/form',(req,res)=>{
     res.render('html/form')
+});
+
+app.post('/form',(req,res)=>{
+    console.log("Data written")
+    res.redirect("/")
 });
 
 const PORT = process.env.PORT || 5000

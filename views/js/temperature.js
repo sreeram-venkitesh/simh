@@ -21,11 +21,11 @@ startContinuousArtyom()
 
 artyom.addCommands([
     {
-        indexes:["start"],
+        indexes:["ok","okay"],
         action:function(){
             prompt.innerText = "Redirecting..."
             setTimeout(()=>{
-                window.location = '/temperature';
+                window.location = '/sanitiser';
             },1000)
         }
     }

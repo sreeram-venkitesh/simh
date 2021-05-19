@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/artyom.js"></script>
+
     <title>SIMH</title>
 </head>
 <body>
@@ -12,6 +14,22 @@
         <img src="https://media.giphy.com/media/3o72EX5QZ9N9d51dqo/giphy.gif" alt=""><br>
         <label>Instructions to use the device</label>
         <h2>Whenever you are ready, say start to begin the data collection process</h2>
+        <h2 id="check"></h2>
+        <h2 id="prompt"></h2>
+
+        <form action="/form" method="POST" id="form">
+            <label for="name" style="text-align:left">Name</label> <br>
+            <input type="text" id="name" placeholder="Name"> <br><br>
+            <label for="age">Age</label><br>
+            <input type="number" id="age" placeholder="Age"> <br><br>
+            <label for="phone">Phone</label><br>
+            <input type="number" id="phone" placeholder="Phone No."> <br><br>
+            <label for="type">Type of Visit</label><br>
+            <input type="text" id="type" placeholder="Name"> <br><br>
+        </form>
     </div>
+
+    <script src="../js/form.js">
+    </script>
 </body>
 </html>

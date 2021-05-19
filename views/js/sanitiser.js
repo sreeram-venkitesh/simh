@@ -2,6 +2,7 @@ var output = document.getElementById('check');
 var prompt = document.getElementById('prompt')
 const artyom = new Artyom();
 
+const form = document.getElementById("form");
 function startContinuousArtyom(){
     artyom.fatality();// use this to stop any of
 
@@ -21,11 +22,11 @@ startContinuousArtyom()
 
 artyom.addCommands([
     {
-        indexes:["start"],
+        indexes:["okay","ok"],
         action:function(){
             prompt.innerText = "Redirecting..."
             setTimeout(()=>{
-                window.location = '/temperature';
+                form.submit();
             },1000)
         }
     }
