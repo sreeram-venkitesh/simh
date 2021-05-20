@@ -1,7 +1,14 @@
 var output = document.getElementById('check');
 var prompt = document.getElementById('prompt')
 const artyom = new Artyom();
+
 const form = document.getElementById("form")
+
+var nameField = document.getElementById("name")
+var ageField = document.getElementById("age")
+var phoneField = document.getElementById("phone")
+var typeField = document.getElementById("type")
+
 
 function startContinuousArtyom(){
     artyom.fatality();// use this to stop any of
@@ -24,21 +31,47 @@ artyom.addCommands([
     {
         indexes:["submit"],
         action:function(){
-            prompt.innerText = "Redirecting..."
+            prompt.innerText = "Submitting information..."
             //Write data to firebase here
-            form.submit()
+
+            const firebaseConfig = 
+            { 
+                apiKey: "AIzaSyDFaQDbmtrf-h1iawaZ4ZpIooZA-RBBqPU", 
+                authDomain: "simh-batch10.firebaseapp.com", 
+                databaseURL: "https://simh-batch10-default-rtdb.asia-southeast1.firebasedatabase.app", 
+                projectId: "simh-batch10", 
+                storageBucket: "simh-batch10.appspot.com", 
+                messagingSenderId: "342199879516", 
+                appId: "1:342199879516:web:dad545fb416ec9aa366399", 
+                measurementId: "G-ZFXD927VQV" 
+            }; 
+            // Initialize Firebase 
+            firebase.initializeApp(firebaseConfig); 
+            //---------------------------------------------------------------CONFIG 
+            
+            
+            //---------------------------------------------------------------INSERT 
+            
+            var d = new Date()
+            firebase.database()
+                .ref(`${d.getDate()}-${d.getMonth()+1}-${d.getFullYear()}/${nameField.value}`)
+                .set({ 
+                    name:nameField.value, 
+                    age:ageField.value, 
+                    phone:phoneField.value, 
+                    type:typeField.value, 
+                }); 
+                
+            //---------------------------------------------------------------INSERT 
+            
             setTimeout(()=>{
-                res.redirect("/")
+                form.submit()
             },1000)
         }
     }
 ]);
 artyom.say("Hello World!")
 
-var nameField = document.getElementById("name")
-var ageField = document.getElementById("age")
-var phoneField = document.getElementById("phone")
-var typeField = document.getElementById("type")
 
 
 artyom.redirectRecognizedTextOutput(function(recognized,isFinal){

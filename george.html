@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <Title>Covid Case</Title> 
+    <meta charset="UTF-8"> 
+</head> 
+<body> 
+    <center> 
+        <h1>Enter Data</h1> 
+        Name 
+        <input type="text" id="name"></input><br></br> 
+        Room no 
+        <input type="text" id="roomno"></input><br></br> 
+        Section 
+        <input type="text" id="section"></input><br></br> 
+        type 
+        <input type="text" id="type"></input><br></br> 
+        <br></br> <br></br> <br></br> 
+        <button id="add">UPDATE</button> 
+    </center> 
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script> 
+    <script id="Mainscript"> 
+        //---------------------------------------------------------------CONFIG 
+        const firebaseConfig = 
+        { 
+            apiKey: "AIzaSyDFaQDbmtrf-h1iawaZ4ZpIooZA-RBBqPU", 
+            authDomain: "simh-batch10.firebaseapp.com", 
+            databaseURL: "https://simh-batch10-default-rtdb.asia-southeast1.firebasedatabase.app", 
+            projectId: "simh-batch10", 
+            storageBucket: "simh-batch10.appspot.com", 
+            messagingSenderId: "342199879516", 
+            appId: "1:342199879516:web:dad545fb416ec9aa366399", 
+            measurementId: "G-ZFXD927VQV" 
+        }; 
+        // Initialize Firebase 
+        firebase.initializeApp(firebaseConfig); 
+        //---------------------------------------------------------------CONFIG 
+        
+        //---------------------------------------------------------------READY 
+        var name1,roll1,sec1,gen1; 
+        function Ready(){ 
+            name1=document.getElementById('name').value; 
+            room1=document.getElementById('roomno').value; 
+            sec1=document.getElementById('section').value; 
+            type1=document.getElementById('type').value; 
+        } 
+        //---------------------------------------------------------------READY 
+        
+        //---------------------------------------------------------------INSERT 
+        document.getElementById('add').onclick = function(){ 
+            Ready(); 
+            console.log(name1) 
+            firebase.database()
+                .ref('29-10-2020/'+sec1+" "+name1)
+                .set({ 
+                    name:name1, 
+                    roomno:room1, 
+                    section:sec1, 
+                    type:type1, 
+                }); 
+            } 
+        //---------------------------------------------------------------INSERT 
+    </script> 
+</body> 
+</html>
