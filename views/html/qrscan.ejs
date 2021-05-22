@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8">
+ <body>
+     <center>
+    <div style="width: 500px" id="reader"></div>
+    <script src="../js/html5-qrcode.min.js"></script>
+    </center>
+    <script id="Main">
+    var html5QrcodeScanner = new Html5QrcodeScanner(
+    "reader", { fps: 10, qrbox: 250 });
+    
+    function onScanSuccess(qrCodeMessage) {
+	 console.log(qrCodeMessage)
+     html5QrcodeScanner.clear();
+    }
+
+    var html5QrcodeScanner = new Html5QrcodeScanner(
+	"reader", { fps: 10, qrbox: 250 });
+     html5QrcodeScanner.render(onScanSuccess);
+
+    </script>
+ </body>
+ </html>

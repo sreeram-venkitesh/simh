@@ -1,5 +1,4 @@
 const express = require('express');
-const Gpio = require('pigpio').Gpio;
 
 const app = express();
 
@@ -22,6 +21,7 @@ app.get('/sanitiser',(req,res)=>{
 
 app.post('/sanitise',(req,res)=>{
     console.log("Servo motor working")
+    const Gpio = require('pigpio').Gpio;
 
     const motor = new Gpio(10, {mode: Gpio.OUTPUT});
     
@@ -44,6 +44,10 @@ app.post('/sanitise',(req,res)=>{
 
 app.get('/form',(req,res)=>{
     res.render('html/form')
+});
+
+app.get('/qrscan',(req,res)=>{
+    res.render('html/qrscan')
 });
 
 app.post('/form',(req,res)=>{

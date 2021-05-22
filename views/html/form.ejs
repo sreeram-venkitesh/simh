@@ -20,6 +20,9 @@
         <h2 id="check"></h2>
         <h2 id="prompt"></h2>
 
+        <button><a href="/qrscan">Show QR Code if you have already entered info</a></button>
+        <br><br>
+
         <form action="/form" method="POST" id="form">
             <label for="name" style="text-align:left">Name</label> <br>
             <input type="text" id="name" placeholder="Name"> <br><br>
@@ -30,6 +33,9 @@
             <label for="type">Type of Visit</label><br>
             <input type="text" id="type" placeholder="Name"> <br><br>
         </form>
+
+        <button onclick="firebaseWrite()">Submit</button>
+
     </div>
 
     <script src="../js/form.js">
