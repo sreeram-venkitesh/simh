@@ -8,33 +8,47 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script> 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script> 
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script> 
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <title>SIMH</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-    <div style="text-align: center;">
-        <h1>Welcome to SIMH</h1>
+<body style="height:100%; vertical-align:middle; padding: auto auto; text-align:center; margin: 0 auto;">
+    <div style="width: 100%; margin-top:5%; margin-left:auto; margin-right:auto; height:fit-content; background-color:#fff; border: 2px solid #333; border-radius:10px;">
+        <h1>Enter your information</h1>
+        <p style="font-size: 18px; color:#333; text-align:center; width:85%; margin:0 auto;">
+            Stand in front of the mic and say the label followed by your answer
+            <br>
+            For example - "Name Sreeram", "Age 22"
+            <br>
+            You can enter the details in any order, and can go again if you need to make corrections.
+        </p>
         
-        <label>Instructions to use the device</label>
-        <h2>Whenever you are ready, say start to begin the data collection process</h2>
+        <p style="font-size: 18px; color:#333;">
+            When you are satisfied with the answers, say 'submit' to submit the form
+            <br>
+            If you are not a first time visitor, say 'QR' to scan your code and proceed
+        </p>
+
+        
         <h2 id="check"></h2>
         <h2 id="prompt"></h2>
 
-        <button><a href="/qrscan">Show QR Code if you have already entered info</a></button>
-        <br><br>
+        <br>
 
-        <form action="/form" method="POST" id="form">
+        <form action="/form" method="POST" id="form"
+            style="width:min-content; text-align: left; margin: 0 auto;">
             <label for="name" style="text-align:left">Name</label> <br>
-            <input type="text" id="name" placeholder="Name"> <br><br>
+            <input type="text" id="name" placeholder="Name"> <br>
             <label for="age">Age</label><br>
-            <input type="number" id="age" placeholder="Age"> <br><br>
+            <input type="number" id="age" placeholder="Age"> <br>
             <label for="phone">Phone</label><br>
-            <input type="number" id="phone" placeholder="Phone No."> <br><br>
+            <input type="number" id="phone" placeholder="Phone No."> <br>
             <label for="type">Type of Visit</label><br>
-            <input type="text" id="type" placeholder="Name"> <br><br>
+            <input type="text" id="type" placeholder="Name"> <br>
         </form>
-
+        <br>
         <button onclick="firebaseWrite()">Submit</button>
+        <br> <br>
 
     </div>
 

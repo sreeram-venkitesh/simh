@@ -25,7 +25,7 @@ artyom.addCommands([
         action:function(){
             prompt.innerText = "Redirecting..."
             setTimeout(()=>{
-                window.location = '/temperature';
+                window.location = '/sanitiser';
             },1000)
         }
     }

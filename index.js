@@ -21,23 +21,23 @@ app.get('/sanitiser',(req,res)=>{
 
 app.post('/sanitise',(req,res)=>{
     console.log("Servo motor working")
-    const Gpio = require('pigpio').Gpio;
+    // const Gpio = require('pigpio').Gpio;
 
-    const motor = new Gpio(10, {mode: Gpio.OUTPUT});
+    // const motor = new Gpio(10, {mode: Gpio.OUTPUT});
     
-    let pulseWidth = 1000;
-    let increment = 100;
+    // let pulseWidth = 1000;
+    // let increment = 100;
     
-    setInterval(() => {
-        motor.servoWrite(pulseWidth);
+    // setInterval(() => {
+    //     motor.servoWrite(pulseWidth);
     
-        pulseWidth += increment;
-        if (pulseWidth >= 2000) {
-        increment = -100;
-        } else if (pulseWidth <= 1000) {
-        increment = 100;
-        }
-    }, 1000);
+    //     pulseWidth += increment;
+    //     if (pulseWidth >= 2000) {
+    //     increment = -100;
+    //     } else if (pulseWidth <= 1000) {
+    //     increment = 100;
+    //     }
+    // }, 1000);
     
     res.redirect("/form")
 });

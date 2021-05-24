@@ -7,18 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/artyom.js"></script>
     <title>SIMH</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body style="text-align: center;">
-    
-    <h1>Welcome to SIMH</h1>
-    <h2>To begin say start</h2>
-    <h2 id="check"></h2>
-    <h2 id="prompt"></h2>
-
-    <button><a href="/temperature">START</a></button>
-    
+<body style=" vertical-align:middle; padding: auto auto; text-align:center; margin: 0 auto;">
+   
+    <div style="width: 100%; margin-top:25%; height:fit-content; background-color:#fff; border: 2px solid #333; border-radius:10px;">
+        <h1 style="font-size: 60px;">SIMH</h1>
+        <p style="font-size: 20px; color:#888;">Seamless non-contact information collection for hospitals</p>
+        <br>
+        <svg xmlns="http://www.w3.org/2000/svg" style="width:50px; height:50px; border:1px solid #888; border-radius:50%; padding:15px; color:#888" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clip-rule="evenodd" />
+        </svg>
+        <p style="font-size: 25px;">Stand in front of the mic and say 'start' to begin</p>
+        <h2 id="check"> </h2>
+        <h2 id="prompt"> </h2>
+        <br>
+        <button><a href="/sanitiser">START</a></button>
+        <br><br>
+    </div>
     <script src="../js/start.js">
     </script>
    

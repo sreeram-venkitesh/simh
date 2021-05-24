@@ -5,19 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/artyom.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>SIMH</title>
 </head>
-<body>
-    <div style="text-align: center;">
-        <h1>Clean your hands with sanitiser</h1>
-        <h2>Keep your hand infront of the sanitiser dispenser as shown </h2>
+
+<body style="height:100%; vertical-align:middle; padding: auto auto; text-align:center; margin: 0 auto;">
+   
+    <div style="width: 100%; margin-top:25%; margin-left:auto; margin-right:auto; height:fit-content; background-color:#fff; border: 2px solid #333; border-radius:10px;">
+        <p style="font-size: 40px; color:#333;">Use the sanitiser</p>
+        <p style="font-size: 20px; color:#333;">Hold your hand as shown to use the automatic sanitiser dispenser</p>
+        
+        <p style="font-size: 25px;">Say 'OK' when you are done</p>
         
         <h2 id="check"></h2>
         <h2 id="prompt"></h2>
+        <br>
         <form id="form" action="/sanitise" method="POST">
             <button type="submit">OK</button>
         </form>
+        <br><br>
     </div>
 
     <script src="../js/sanitiser.js"></script>
